@@ -71,8 +71,8 @@
                     <div class="info-item">
                         <div class="info-icon">✉️</div>
                         <h3>E-posta</h3>
-                        <p>info@dijipro.com</p>
-                        <p>destek@dijipro.com</p>
+                        <p>info@juvoimpact.com</p>
+                        <p>destek@juvoimpact.com</p>
                     </div>
                     
                     <div class="info-item">
@@ -86,7 +86,7 @@
                 <div class="contact-form">
                     <h2>İletişim Formu</h2>
                     <form action="https://formsubmit.co/eymengulart@gmail.com" method="POST">
-                        <input type="hidden" name="_next" value="https://dijipro.com/iletisim.html">
+                        <input type="hidden" name="_next" value="https://juvoimpact.com/iletisim.html">
                         <input type="hidden" name="_subject" value="Yeni İletişim Formu Mesajı!">
                         <input type="hidden" name="_captcha" value="true">
                         <input type="hidden" name="_template" value="table">
@@ -142,73 +142,12 @@
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
             </svg>
         </a>
-        <a href="#" class="social-icon" title="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-        </a>
     </div>
 
     <footer>
-        <p>&copy; 2024 DIJIPRO. Tüm hakları saklıdır.</p>
+        <p>&copy; 2024 JUVO IMPACT. Tüm hakları saklıdır.</p>
     </footer>
 
-    <script>
-        // Theme Toggle
-        const themeToggle = document.querySelector('.theme-toggle');
-        
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
-
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: false,
-            mirror: true
-        });
-
-        // Mobile Menu
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('.nav-menu');
-        const body = document.body;
-
-        hamburger.addEventListener('click', () => {
-            if (navMenu.style.display === 'flex') {
-                navMenu.style.display = 'none';
-                body.classList.remove('mobile-menu-active');
-            } else {
-                navMenu.style.display = 'flex';
-                body.classList.add('mobile-menu-active');
-            }
-        });
-
-        // Close menu when clicking on links
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.style.display = 'none';
-                body.classList.remove('mobile-menu-active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('nav') && body.classList.contains('mobile-menu-active')) {
-                navMenu.style.display = 'none';
-                body.classList.remove('mobile-menu-active');
-            }
-        });
-    </script>
+    <script defer src="js/main.js"></script>
 </body>
 </html> 
